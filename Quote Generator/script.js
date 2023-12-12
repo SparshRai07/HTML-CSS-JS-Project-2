@@ -3,6 +3,7 @@ const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
 const twitterBtn = document.getElementById('twitter');
 const newQuoteBtn = document.getElementById('new-quote');
+const loader = document.getElementById('loader');
 
 let apiQuotes = [];
 // get quotes from api
@@ -18,9 +19,21 @@ async function getQuotes() {
   }
 }
 
+//show loading 
+function loading (){
+  loader.hidden=false;
+  quoteContainer.hidden = true;
+}
+
+//hide Loading 
+function complete() {
+  quoteContainer.hidden = false;
+  loader.hiddem = true;
+}
 
 //show New Quote
 function newQuote() {
+  loading ();
   // Pick a random quote from apiQuotes array
   const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
 
@@ -43,6 +56,7 @@ function newQuote() {
     }
 
     quoteText.textContent = quote.text;
+    complete();
   }
 }
 
