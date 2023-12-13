@@ -5,19 +5,19 @@ const twitterBtn = document.getElementById('twitter');
 const newQuoteBtn = document.getElementById('new-quote');
 const loader = document.getElementById('loader');
 
-let apiQuotes = [];
-// get quotes from api
-async function getQuotes() {
-  const apiUrl = 'https://type.fit/api/quotes';
-  try {
-    const response = await fetch(apiUrl);
-    apiQuotes = await response.json();
-    newQuote();
-  } catch (error) {
-    // Catch Error Here
-    console.error('Error fetching quotes:', error);
-  }
-}
+// let apiQuotes = [];
+// // get quotes from api
+// async function getQuotes() {
+//   const apiUrl = 'https://type.fit/api/quotes';
+//   try {
+//     const response = await fetch(apiUrl);
+//     apiQuotes = await response.json();
+//     newQuote();
+//   } catch (error) {
+//     // Catch Error Here
+//     console.error('Error fetching quotes:', error);
+//   }
+// }
 
 //show loading 
 function loading (){
