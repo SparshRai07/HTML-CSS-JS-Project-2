@@ -3,7 +3,7 @@
 
 /* other css file imports */
 @import url("header.css");
-@import url("sections/hero.css");
+@import url("hero.css");
 @import url("sections/about.css");
 @import url("sections/popular.css");
 @import url("sections/trending.css");
